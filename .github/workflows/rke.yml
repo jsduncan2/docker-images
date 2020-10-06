@@ -15,7 +15,7 @@ jobs:
         name: Prepare
         id: prep
         run: |
-          DOCKER_IMAGE=jsduncan2/rke
+          DOCKER_IMAGE=${{ secrets.DOCKERHUB_REPO }}
           VERSION=noop
           if [ "${{ github.event_name }}" = "schedule" ]; then
             VERSION=nightly
